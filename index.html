@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLAvanzado</title>
+        <!--Hoja de estilos-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--Aqui estamos haciendo cuadros de texto para agregar texto-->
+    <div class="container">
+        <form action="/tst.html" method="get">
+
+            <label for="mail">Correo electronico</label>
+            <input type="text" id="mail" name="mail">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password">
+
+            <input type="submit" value="submit">
+
+        </form>
+    </div>
+    <div class="container">
+        <form action="/tst.html" method="post">
+
+            <label for="mail">Correo electronico</label>
+            <input type="text" id="mail" name="mail" required>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="submit">
+            <input type="number">
+
+        </form>
+    </div>
+    <div class="container">
+        <form action="/tst.html" method="get">
+            Comida favorita
+            <input type="radio" name="fav_comida" id="radio1" value="pizza">
+            <label for="radio1">pizza</label>
+            <input type="radio" name="fav_comida" id="radio2" value="sushi">
+            <label for="radio2">sushi</label>
+            <input type="radio" name="fav_comida" id="radio3" value="tacos">
+            <label for="radio3">tacos</label>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <div class="container">
+        <form action="/tst.html" method="get">
+            <input type="checkbox" id="ingrediente1" name="pollito" value="pollito">
+            <label for="ingrediente1">Pollito</label>
+            <input type="checkbox" id="ingrediente2" name="setas">
+            <label for="ingrediente2">setas</label>
+            <input type="checkbox" id="ingrediente3" name="carnita">
+            <label for="ingrediente3">carnita</label>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <form action="/tst.html" method="get" id="formulario1">
+
+            <select name="pan" id="pan">
+                <option disabled selected value="">seleccionar</option>
+                <option value="">Integral</option>
+                <option value="">Ajo</option>
+                <option value="">Keto friendly</option>
+                <option value="">Dulce</option>
+                <option value="">Blanco</option>
+                <option value="">Masa madre</option>
+                <option value="">Horno</option>
+            </select>
+
+            <input type="date" id="start" name="start">
+            <input type="datetime-local" id="start-date-hour" name="start" max="2022-05-27" min="2002-03-03">
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <button form="formulario1">Boton real</button>
+    <button onclick="myFunction()">Boton real 2</button>
+    <!--A continuacion hacemos uso de tr = table row = fila. Dentro de esta fila abrimos th para los encabezados-->
+<div class="container"> 
+
+    <table>
+        <tr>
+            <th>Correo</th>
+            <th>Nombre</th>
+            <th>Status</th>
+        </tr>
+           <!--Para la siguiente fila que es donde vamos a ingresar datos, usamos td = table data --> 
+        <tr>
+            <td>businessmoutster@gmail.com</td>
+            <td>Alain Vazquez</td>
+            <td>Aprobado</td>
+        </tr>
+        <tr>
+            <td>karen.medina@gatos.com</td>
+            <td>Karen Medina</td>
+            <td>Aprobado</td>
+        </tr>
+        <tr>
+            <td>jose@correo.com</td>
+            <td>Jose Algo</td>
+            <td>Reprobado</td>
+        </tr>
+
+    </table>
+</div>
+<!--Atributos que permiten combinar columnas-->
+<div class="container">
+    <table>
+        <colgroup>
+            <col span="2" style="background-color: red;">
+            <col span="1" style="background-color: orange;">
+        </colgroup>
+        <tr>
+            <th>Correo</th>
+            <th>Nombre</th>
+            <th>Status</th>
+        </tr>
+    </table>
+
+</div>
+
+<!--Atributo que permiten combinar columnas-->
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Correo</th>
+                    <th colspan="2">Nombre y Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>businessmoutster@gmail.com</td>
+                    <td>Alain Vazquez</td>
+                    <td>Aprobado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <a href="https://www.google.com">Google</a>
+        <!--Blank abre una pestaña nueva y direcciona a la URL-->
+        <a href="http://www.google.com" target="_blank">GoogleBlank</a>
+        <!-- Self direcciona a la url dentro de la misma ventana activa -->
+        <a href="http://www.google.com" target="_self">GoogleSelf</a>
+        <!-- Top y parent se utilizan principalmente cuando se le agrega la funcion de iframe -->
+        <a href="http://www.google.com" target="_top">GoogleTop</a>
+        <a href="http://www.google.com" target="_parent">GoogleParent</a>
+    </div>
+    <div class="container">
+        <a href="mailto:businessmoutster@gmail.com">Correo</a>
+        <!--mailto:emanuelsaucedo52@gmail.com?subject=Asunto&body=Mensaje-->
+    </div>
+
+    <script>
+        function myFunction() {
+            alert("hola");
+        }
+    </script>
+
+</body>
+</html>
